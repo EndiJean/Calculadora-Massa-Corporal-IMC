@@ -36,8 +36,8 @@ public class CalcularIMC extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         txtpeso = new javax.swing.JTextField();
         btncalcular = new javax.swing.JButton();
-        txtaltura = new javax.swing.JFormattedTextField();
         btncalcular1 = new javax.swing.JButton();
+        txtaltura = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
@@ -71,18 +71,18 @@ public class CalcularIMC extends javax.swing.JFrame {
             }
         });
 
-        try {
-            txtaltura.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#,##")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-        txtaltura.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-
         btncalcular1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btncalcular1.setText("Limpar");
         btncalcular1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncalcular1ActionPerformed(evt);
+            }
+        });
+
+        txtaltura.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtaltura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtalturaActionPerformed(evt);
             }
         });
 
@@ -102,20 +102,20 @@ public class CalcularIMC extends javax.swing.JFrame {
                         .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(txtpeso, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(txtaltura, javax.swing.GroupLayout.Alignment.LEADING)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(jLabel1)
-                .addGap(11, 11, 11)
-                .addComponent(txtpeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2)
+                .addComponent(txtpeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(11, 11, 11)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
                 .addComponent(txtaltura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btncalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btncalcular1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -260,6 +260,10 @@ public class CalcularIMC extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btncalcular1ActionPerformed
 
+    private void txtalturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtalturaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtalturaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -306,7 +310,7 @@ public class CalcularIMC extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JLabel lblclassificacao;
     private javax.swing.JLabel lblimc;
-    private javax.swing.JFormattedTextField txtaltura;
+    private javax.swing.JTextField txtaltura;
     private javax.swing.JTextField txtpeso;
     // End of variables declaration//GEN-END:variables
 }
